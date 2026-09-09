@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RISE Krishna Sai Prakasam Group of Institutions – AI Admission Assistant</title>
+    <meta name="description" content="Get personalised college admission guidance for RISE Krishna Sai Prakasam Group of Institutions powered by an AI Assistant." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- IBM watsonx Orchestrate – College Admission RAG Agent -->
+    <script>
+      window.wxOConfiguration = {
+        orchestrationID: "1b5381d5d8994b24bf3aedf110f8ca7a_076f1bf2-354d-4ab3-89b0-366186c341dd",
+        hostURL: "https://jp-tok.watson-orchestrate.cloud.ibm.com",
+        rootElementID: "wxo-chat-root",
+        deploymentPlatform: "ibmcloud",
+        crn: "crn:v1:bluemix:public:watsonx-orchestrate:jp-tok:a/1b5381d5d8994b24bf3aedf110f8ca7a:076f1bf2-354d-4ab3-89b0-366186c341dd::",
+        chatOptions: {
+            agentId: "436f5e96-d13c-49c5-8f1e-4e2df2a2042f"
+        }
+      };
+
+      setTimeout(function () {
+        const script = document.createElement('script');
+        script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+        script.addEventListener('load', function () {
+            wxoLoader.init();
+        });
+        document.head.appendChild(script);
+      }, 0);
+    </script>
+  </body>
+</html>
