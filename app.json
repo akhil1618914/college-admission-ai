@@ -1,0 +1,44 @@
+{
+  "name": "college-admission-ai",
+  "version": "1.0.0",
+  "description": "AI-powered college admission assistant for RISE Krishna Sai Prakasam Group of Institutions using IBM watsonx Orchestrate and a grounded RAG knowledge source.",
+  "project": {
+    "title": "College Admission Agent (RAG Based)",
+    "institution": "RISE Krishna Sai Prakasam Group of Institutions",
+    "domain": "Education / College Admissions",
+    "problem_statement": "Build a RAG-powered college admission agent that retrieves and summarizes admission policies, eligibility criteria and FAQs from institutional databases or official sources; answers natural-language questions; helps with course selection, application guidance, fee structure and important deadlines; and uses trusted information.",
+    "implementation": "IBM watsonx Orchestrate agent with a connected RISE college admission knowledge source and an embedded web chat.",
+    "rag": {
+      "enabled": true,
+      "knowledge_source": "Official RISE Krishna Sai Prakasam Group of Institutions admission information",
+      "grounding_policy": "Use the connected knowledge source as the primary factual source; do not invent fees, eligibility, deadlines, courses or other institutional facts."
+    }
+  },
+  "technology": {
+    "platform": "IBM watsonx Orchestrate",
+    "cloud": "IBM Cloud",
+    "frontend": "React + TypeScript + Vite",
+    "retrieval": "watsonx Orchestrate Knowledge / RAG",
+    "deployment": "Embedded agent",
+    "model": "Watsonx Orchestrate Frontier"
+  },
+  "repository": {
+    "url": "https://github.com/akhil1618914/college-admission-ai.git",
+    "branch": "main"
+  },
+  "entrypoint": "frontend",
+  "setup": {
+    "install": "cd frontend && npm install",
+    "run": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "integrations": {
+    "orchestrate_agent": "College Admission RAG Agent",
+    "embedded_chat": true
+  },
+  "notes": [
+    "The final implementation uses IBM watsonx Orchestrate and its connected knowledge source.",
+    "The live deployed agent is configured with Watsonx Orchestrate Frontier; this file does not claim that the live agent uses IBM Granite.",
+    "No API keys, credentials, private keys or secrets are included."
+  ]
+}
